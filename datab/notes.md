@@ -54,5 +54,14 @@ Defines what will need to be stored and what the relationships and actions betwe
 **Logical Model**
 Model of the data according to the view of the DBMS.
 
-## AUG 28
+## SEP 4
+**Chen's Notation**
 
+**Disjointness** constraints can ensure an entity can only be a member of one subclass.
+If an entity can be a member of more than one subclass then the specialization is **overlapping**.
+In **total specialization**, a specific specialization is required. One cannot store a vague archetype in the system.
+**Field** database row/column entry.
+
+**UML Diagrams**
+
+- whether a field is null: Chen's Notation can't show whether a field can be null or what it's possible values are, but the UML Diagram can.
