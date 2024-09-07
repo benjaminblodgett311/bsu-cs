@@ -57,3 +57,9 @@ $$
 **Maxterm** is a/the summation of a row of binary inputs that results in 0.
 
 To get the **POS** either summate the minterms of all rows that already result in 1, or multiply all the rows that already result in 0.
+
+### Sep 4
+
+Because of the nature of **CMOS**, we try to make logic using NOR or NAND gates.
+
+
