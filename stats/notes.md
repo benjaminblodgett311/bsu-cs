@@ -2,7 +2,6 @@
 
 ## AUG 20
 
-## definitions
 **population**
 collection of well defined objects of interest
 
@@ -31,7 +30,6 @@ Chase - glasses
 
 ## AUG 29
 
-## definitions
 A **Simple Event** is an event that has no more than 1 outcome.
 
 $$
@@ -46,3 +44,25 @@ Given a sample space $S$, $P(A)$ is called the "probability of $A$" is a number 
 1. $P(A) \geq 0$
 2. $P(S) = 1$
 3. If $A_1, A_2, \dots$ I don't know what she wrote.
+
+## SEP 5
+
+The **conditional probability** of $A$ given $B$ is denoted
+
+$$
+P ( A | B )
+$$
+
+eg. The probability of $A$ knowing the $B$ happened
+
+The **general multiplication rule**:
+
+$$
+P(A \cap B) = P(A | B) \cdot P(B)
+$$
+
+**Baye's Rule**
+
+$$
+P ( A_i | B ) = \frac{P(A_i \cap B)}{P(B)}
+$$
