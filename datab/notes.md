@@ -112,3 +112,17 @@ The **Primary Key** is the chosen candidate key
 - usually we can add a primary key by specifying that it is not null and unique
 
 The **Foreign Key** is a column or group of columns in a relational database table that must match a value in another table
+
+## Sep 11
+
+### SQL
+
+SELECT          what columns need returned
+FROM / JOIN     what data do I need or where is that data?
+WHERE           filter any data by field
+GROUP BY        query *per* something?
+HAVING          filter data using aggregate function
+ORDER BY        ascending or descending
+LIMIT           show a max of items
+
+
