@@ -66,3 +66,24 @@ $$
 $$
 P ( A_i | B ) = \frac{P(A_i \cap B)}{P(B)}
 $$
+
+## SEP 12
+
+**Indigence** $P(A|B) = P(A)$
+
+**Mutually Exclusive** $A \cap B = \emptyset$
+
+### 3.1 4-digit PIN
+$$ y = \text{number of nonzero digits in a PIN}$$
+
+|  &  | 0000 | 0001 | 0002 | $\cdots$ | 5093 | $\cdots$ | 9999 |
+| --- | ---- | ---- | ---- | -------- | ---- | -------- | ---- |
+| $y$ |  0   |  1   |  1   |          |  3   |          |  4   |
+
+
+&  $= \{ HHH, HHT, HTH, HTT, THH, THT, TTH, TTT \}$
+
+### all pmfs statisfy
+
+1. $p(y) \geq 0 \forall{y}$
+2. $\sum p(y) \forall{y} = 1$
