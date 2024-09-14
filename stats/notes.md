@@ -83,7 +83,7 @@ $$ y = \text{number of nonzero digits in a PIN}$$
 
 &  $= \{ HHH, HHT, HTH, HTT, THH, THT, TTH, TTT \}$
 
-### all pmfs statisfy
+### all PMFS satisfy
 
 1. $p(y) \geq 0 \forall{y}$
 2. $\sum p(y) \forall{y} = 1$
