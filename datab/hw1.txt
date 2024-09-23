@@ -1,0 +1,47 @@
+c---------------------------------- Part 1: Conceptual Model -----------------------------c
+|                                                                                         |
+|                           -------------   (name)   --------------                       |
+|                          /---------   (phone number)  -----------\   (billing address)  |
+|                         /                                         \ /                   |
+|                   o----------o                                o----------o              |
+|                   | employee | --  X customer is helped X  -- | customer |              |
+|                   o----------o                                o----------o              |
+|                        |                                           |                    |
+|                                                                                         |
+|                    X prints X                                   X owns X                |
+|                                                                                         |
+|                        |                                           |                    |
+|                   o---------o -- (customer id)                o---------o               |
+|  (employee id) -- | invoice |                                 | bicycle |               |
+|                   o---------o -- (open / closed status)       o---------o               |
+|                        |                                           |                    |
+|                        v                                           |                    |
+|                 o--------------o                                   |                    |
+|                 | invoice_item |                                   |                    |
+|                 o--------------o                                   |                    |
+|                      /     \                                       |                    |
+|                     v       v                                                           |
+|                o-------o o------o -------------------  X work is performed on X         |
+|                | goods | | work |                                                       |
+|  (quantity) -- o-------o o------o                                                       |
+|               /     |     |      \                                                      |
+|              /      |     |     (cost)                                                  |
+|  (unit price)       |     |                                                             |
+|                  (description)                                                          |
+|                                                                                         |
+c-----------------------------------------------------------------------------------------c
+
+Part 2: Relational Model
+
+CREATE TABLE Employee (
+   employee_id INT PRIMARY KEY,
+   name VARCHAR(255),
+   phone_number VARCHAR(20)
+);
+
+CREATE TABLE Customer (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(255),
+    billing_address VARCHAR(255),
+    phone_number VARCHAR(20)
+);
