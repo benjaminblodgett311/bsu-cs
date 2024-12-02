@@ -125,4 +125,6 @@ HAVING          filter data using aggregate function
 ORDER BY        ascending or descending
 LIMIT           show a max of items
 
+## Sep 16
 
+### Altering Tables
