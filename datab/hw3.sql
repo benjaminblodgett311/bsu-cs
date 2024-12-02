@@ -40,3 +40,5 @@ create table if not exists subscription (
    user_id int,
    foreign key (user_id) references userperson(user_id)
 );
+
+insert into table bookmark (url, is_private, create_date, update_date, description, title, bookmark_id) values ("https://www.youtube.com/watch?v=6w3EbmeD9UY", TRUE, NOW(), NULL, 'Give it a listen', 'Epic Song');
