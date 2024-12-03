@@ -49,6 +49,14 @@ create table if not exists site_cache (
    html text,
    primary key (cache_id, cache_date)
 );
+
+insert into userperson (create_date, username, password_hash, email) values (now(), 'obamaismydad5', '314fe973c673ea83730cb82e03be63b1faa4dab197ba97f650d14f71457c4de5', 'obama@gmail.com');
+insert into userperson (create_date, username, password_hash, email) values (now(), 'epicgamer79', '7c25875442b7173be0748f22bccf2968a0dd1a60207b71df11674402c854b517', 'gaming@gmail.com');
+insert into userperson (create_date, username, password_hash, email) values (now(), 'poopeater375', '032ee6373db32ab77f71eabac765ca7f2d1b7fb442c884daf325d569499f8ef3', 'poop@gmail.com');
+insert into userperson (create_date, username, password_hash, email) values (now(), 'x_ragingwhale_x', 'e940a3d4f76257cbf61fceb84d33f12743c7bc36d212f412d86bd591a819bbbf', 'whale@gmail.com');
+insert into userperson (create_date, username, password_hash, email) values (now(), 'oldmeme', '79c270cb3225e8264697144f3cf7675df8e314d40bc42922f9d7feeb5e31f6be', 'oldmeme@gmail.com');
+insert into userperson (create_date, username, password_hash, email) values (now(), 'burritocaties', 'b67608054a8e173aa239b61a240d5e92211268da38944964c1d859f7bc41a739', 'burritocaties@gmail.com');
+
 insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://www.youtube.com/watch?v=6w3EbmeD9UY', true, now(), null, 'Give it a listen', 'Epic Song', 2);
 insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://docs.openiam.com/docs-4.2.1.3/appendix/2-openssl', false, now(), null, 'How to install OpenSSL', 'Install OpenSSL', 2);
 insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://tmuxcheatsheet.com/', true, now(), null, 'This is cool stuff in tmux', 'Tmux Cheatsheet', 4);
@@ -66,13 +74,6 @@ insert into tag (tagname, bookmark_id) values ('informative', 4);
 insert into tag (tagname, bookmark_id) values ('informative', 5);
 
 insert into site_cache (url, cache_date, success, html) values ('https://tmuxcheatsheet.com/', now(), false, NULL);
-
-insert into userperson (create_date, username, password_hash, email) values (now(), 'obamaismydad5', '314fe973c673ea83730cb82e03be63b1faa4dab197ba97f650d14f71457c4de5', 'obama@gmail.com');
-insert into userperson (create_date, username, password_hash, email) values (now(), 'epicgamer79', '7c25875442b7173be0748f22bccf2968a0dd1a60207b71df11674402c854b517', 'gaming@gmail.com');
-insert into userperson (create_date, username, password_hash, email) values (now(), 'poopeater375', '032ee6373db32ab77f71eabac765ca7f2d1b7fb442c884daf325d569499f8ef3', 'poop@gmail.com');
-insert into userperson (create_date, username, password_hash, email) values (now(), 'x_ragingwhale_x', 'e940a3d4f76257cbf61fceb84d33f12743c7bc36d212f412d86bd591a819bbbf', 'whale@gmail.com');
-insert into userperson (create_date, username, password_hash, email) values (now(), 'oldmeme', '79c270cb3225e8264697144f3cf7675df8e314d40bc42922f9d7feeb5e31f6be', 'oldmeme@gmail.com');
-insert into userperson (create_date, username, password_hash, email) values (now(), 'burritocaties', 'b67608054a8e173aa239b61a240d5e92211268da38944964c1d859f7bc41a739', 'burritocaties@gmail.com');
 
 insert into subscription (user_id) values (1);
 insert into subscription (user_id) values (2);
