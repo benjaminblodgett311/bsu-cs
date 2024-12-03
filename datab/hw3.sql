@@ -50,11 +50,11 @@ create table if not exists site_cache (
    primary key (cache_id, cache_date)
 );
 
-insert into bookmark (url, is_private, create_date, update_date, description, title) values ('https://www.youtube.com/watch?v=6w3EbmeD9UY', true, now(), null, 'Give it a listen', 'Epic Song');
-insert into bookmark (url, is_private, create_date, update_date, description, title) values ('https://docs.openiam.com/docs-4.2.1.3/appendix/2-openssl', false, now(), null, 'How to install OpenSSL', 'Install OpenSSL');
-insert into bookmark (url, is_private, create_date, update_date, description, title) values ('https://tmuxcheatsheet.com/', true, now(), null, 'This is cool stuff in tmux', 'Tmux Cheatsheet');
-insert into bookmark (url, is_private, create_date, update_date, description, title) values ('https://medium.com/@wujido20/handling-flags-in-bash-scripts-4b06b4d0ed04', true, now(), null, 'A compehensive guide', 'Bash flag handling');
-insert into bookmark (url, is_private, create_date, update_date, description, title) values ('https://www.ionos.com/digitalguide/server/configuration/linux-alias-command/', true, now(), null, 'Creating command shorcuts on Linux', 'The alias command');
+insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://www.youtube.com/watch?v=6w3EbmeD9UY', true, now(), null, 'Give it a listen', 'Epic Song', 2);
+insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://docs.openiam.com/docs-4.2.1.3/appendix/2-openssl', false, now(), null, 'How to install OpenSSL', 'Install OpenSSL', 2);
+insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://tmuxcheatsheet.com/', true, now(), null, 'This is cool stuff in tmux', 'Tmux Cheatsheet', 4);
+insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://medium.com/@wujido20/handling-flags-in-bash-scripts-4b06b4d0ed04', true, now(), null, 'A compehensive guide', 'Bash flag handling', 4);
+insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://www.ionos.com/digitalguide/server/configuration/linux-alias-command/', true, now(), null, 'Creating command shorcuts on Linux', 'The alias command', 4);
 
 insert into tag (tagname, bookmark_id) values ('funny', 1);
 insert into tag (tagname, bookmark_id) values ('openssl', 2);
