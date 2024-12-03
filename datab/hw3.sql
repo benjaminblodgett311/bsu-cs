@@ -49,7 +49,6 @@ create table if not exists site_cache (
    html text,
    primary key (cache_id, cache_date)
 );
-
 insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://www.youtube.com/watch?v=6w3EbmeD9UY', true, now(), null, 'Give it a listen', 'Epic Song', 2);
 insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://docs.openiam.com/docs-4.2.1.3/appendix/2-openssl', false, now(), null, 'How to install OpenSSL', 'Install OpenSSL', 2);
 insert into bookmark (url, is_private, create_date, update_date, description, title, user_id) values ('https://tmuxcheatsheet.com/', true, now(), null, 'This is cool stuff in tmux', 'Tmux Cheatsheet', 4);
