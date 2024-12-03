@@ -2,11 +2,25 @@ create database if not exists hw3;
 
 use hw3;
 
-drop table tag;
-drop table subscription;
 drop table site_cache;
+drop table tag;
 drop table bookmark;
+drop table subscription;
 drop table userperson;
+
+create table if not exists userperson (
+   create_date timestamp not null,
+   username varchar(32) not null,
+   password_hash char(64) not null,
+   email varchar(64) not null,
+   user_id int auto_increment primary key
+);
+
+create table if not exists subscription (
+   subscriber_user_id int auto_increment primary key,
+   user_id int,
+   foreign key (user_id) references userperson(user_id)
+);
 
 create table if not exists bookmark (
 	url varchar(1024) not null,
@@ -15,7 +29,9 @@ create table if not exists bookmark (
 	update_date timestamp,
 	description text not null,
 	title varchar(64) not null,
-	bookmark_id int auto_increment primary key
+	bookmark_id int auto_increment primary key,
+   user_id int,
+   foreign key (user_id) references userperson(user_id)
 );
 
 create table if not exists tag (
@@ -32,20 +48,6 @@ create table if not exists site_cache (
    success boolean not null,
    html text,
    primary key (cache_id, cache_date)
-);
-
-create table if not exists userperson (
-   create_date timestamp not null,
-   username varchar(32) not null,
-   password_hash char(64) not null,
-   email varchar(64) not null,
-   user_id int auto_increment primary key
-);
-
-create table if not exists subscription (
-   subscriber_user_id int auto_increment primary key,
-   user_id int,
-   foreign key (user_id) references userperson(user_id)
 );
 
 insert into bookmark (url, is_private, create_date, update_date, description, title) values ('https://www.youtube.com/watch?v=6w3EbmeD9UY', true, now(), null, 'Give it a listen', 'Epic Song');
